@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="soundjs-0.6.2" level="application" />
+    <orderEntry type="library" name="tweenjs-0.6.2" level="application" />
+    <orderEntry type="library" name="preloadjs-0.6.2" level="application" />
+    <orderEntry type="library" name="createjs-2015.11.26" level="application" />
+  </component>
+</module>
