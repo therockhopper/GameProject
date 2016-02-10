@@ -88,3 +88,70 @@ function drawMessages() {
     livesTxt.x = stage.canvas.width - 10;
     stage.addChild(livesTxt);
 }
+
+function onLetterClick(e) {
+    var btn = e.target;
+    var txt = btn.txt;
+    btn.removeEventListener('click', onLetterClick);
+    checkForMatches(txt);
+    checkGame();
+}
+
+function checkForMatches(txt) {
+    var letter = txt.text;
+    var i, char, box, txtClone;
+    var match = false;
+    var l = answer.length;
+
+    for (i = 0; i < l; i++) {
+        char = answer[i];
+        if (char == ' ' || char == '&') {
+            continue; }
+        box = stage.getChildByName('box_' + i);
+        if (box.key == letter) {
+            lettersNeeded--;
+            match = true;
+            txtClone= txt.clone();
+            txtClone.color = "#000";
+            txtClone.x = box.x;
+            txtClone.y = box.y;
+            stage.addChild(txtClone);
+        } }
+    stage.removeChild(txt);
+    if (!match) {
+        lives--;
+        livesTxt.text = "LIVES: " + lives;
+    }
+}
+function checkGame() {
+    if (lettersNeeded == 0) {
+        win = true;
+        gameOver();
+    }
+    else if (lives == 0) {
+        win = false;
+        gameOver();
+    }
+}
+
+
+function gameOver() {
+    stage.removeAllChildren();
+    var msg = win ? "YOU WIN!" : "YOU LOSE";
+    gameOverTxt = new createjs.Text(msg, "36px Arial");
+    gameOverTxt.alpha = 0;
+    gameOverTxt.color = win ? 'blue' : 'red';
+    gameOverTxt.textAlign = 'center';
+    gameOverTxt.textBaseline = 'middle';
+    gameOverTxt.x = stage.canvas.width / 2;
+    gameOverTxt.y = stage.canvas.height / 2;
+    stage.addChild(gameOverTxt);
+    createjs.Tween.get(gameOverTxt).to({alpha:1},1000);
+}
+
+function startGame() {
+    createjs.Ticker.setFPS(60);
+    createjs.Ticker.addEventListener("tick", function (e) {
+        stage.update();
+    });
+}
