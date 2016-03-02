@@ -16,21 +16,21 @@
     const SCORE_BOARD_HEIGHT = 50;
     const ARROW_KEY_LEFT = 37;
     const ARROW_KEY_RIGHT = 39;
+    const ARROW_KEY_DOWN = 40;
+    const ARROW_KEY_UP = 38;
     const SPACE_KEY = 32;
 
     // game variables
-    var canvas, stage, paddle, puck, board, scoreTxt, livesTxt, messageTxt, messageInterval;
-    var leftWall, rightWall, ceiling, floor;
+    var canvas, stage,board, scoreTxt, livesTxt, messageTxt;
+    var leftWall, rightWall, ceiling;
+
     var leftKeyDown = false;
     var rightKeyDown = false;
-    var uptKeyDown = false;
+    var upKeyDown = false;
     var downKeyDown = false;
 
-    var paddleHits = 0;
-    var combo = 0;
     var lives = 5;
     var score = 0;
-    var level = 0;
 
     // frame rate of game
     var frameRate = 24;
@@ -39,7 +39,18 @@
     var assetManager = null;
     var whammy = null;
 
-    // ------------------------------------------------------------ private methods
+    // ============================================================= private methods
+
+    function newGame() {
+        buildWalls();
+        stage.update();
+        buildMessageBoard();
+        buildTopBoard();
+        setControls();
+        newLevel();
+        newLevel();
+    }
+
     function buildWalls() {
         var wall = new createjs.Shape();
         wall.graphics.beginFill('#333');
@@ -94,7 +105,59 @@
         stage.addChild(messageTxt);
     }
 
-    // ------------------------------------------------------------ event handlers
+    // ---------------------------- Keyboard input
+    function setControls() {
+        window.onkeydown = handleKeyDown;
+        window.onkeyup = handleKeyUp;
+    }
+
+    function handleKeyDown(e) {
+        e = !e ? window.event : e;
+        switch (e.keyCode) {
+            case ARROW_KEY_LEFT:
+                leftKeyDown = true;
+                break;
+            case ARROW_KEY_RIGHT:
+                rightKeyDown = true;
+                break;
+            case ARROW_KEY_DOWN:
+                downKeyDown = true;
+                break;
+            case ARROW_KEY_UP:
+                upKeyDown = true;
+                break;
+        }
+    }
+
+    function handleKeyUp(e) {
+        e = !e ? window.event : e;
+        switch (e.keyCode) {
+            case ARROW_KEY_LEFT:
+                leftKeyDown = false;
+                break;
+            case ARROW_KEY_RIGHT:
+                rightKeyDown = false;
+                break;
+            case ARROW_KEY_DOWN:
+                downKeyDown = false;
+                break;
+            case ARROW_KEY_UP:
+                upKeyDown = false;
+                break;
+            case SPACE_KEY:
+                if (gameRunning) {
+                    createjs.Ticker.setPaused(createjs.Ticker.getPaused() ? false : true);
+                }
+                else {
+                    resetGame();
+                }
+                break;
+        }
+
+    // ---------------------
+    }
+
+    // ===================================================== event handlers
     function onInit() {
         console.log(">> initializing");
 
@@ -106,9 +169,7 @@
         // create stage object
         stage = new createjs.Stage(canvas);
 
-        buildWalls();
-        buildMessageBoard();
-        buildTopBoard()
+        newGame();
 
         // construct preloader object to load spritesheet and sound assets
         assetManager = new AssetManager(stage);
