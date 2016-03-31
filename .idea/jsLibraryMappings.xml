@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="PROJECT" libraries="{createjs-2015.11.26, preloadjs-0.6.2, soundjs-0.6.2, tweenjs-0.6.2}" />
+    <file url="PROJECT" libraries="{createjs-2015.11.26, easeljs-0.8.1, preloadjs-0.6.1, preloadjs-0.6.2, soundjs-0.6.1, soundjs-0.6.2, tweenjs-0.6.2}" />
   </component>
 </project>

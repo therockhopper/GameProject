@@ -8,5 +8,8 @@
     <orderEntry type="library" name="tweenjs-0.6.2" level="application" />
     <orderEntry type="library" name="preloadjs-0.6.2" level="application" />
     <orderEntry type="library" name="createjs-2015.11.26" level="application" />
+    <orderEntry type="library" name="easeljs-0.8.1" level="application" />
+    <orderEntry type="library" name="soundjs-0.6.1" level="application" />
+    <orderEntry type="library" name="preloadjs-0.6.1" level="application" />
   </component>
 </module>

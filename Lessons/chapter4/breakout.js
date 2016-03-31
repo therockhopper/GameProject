@@ -202,6 +202,7 @@ function shiftBricksDown() {
         }
     }
 }
+
 function update() {
     updatePaddle();
     updatePuck();
@@ -320,6 +321,7 @@ function evalGame() {
         newLevel();
     }
 }
+
 function gameOver() {
     createjs.Ticker.setPaused(true);
     gameRunning = false;

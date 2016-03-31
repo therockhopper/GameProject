@@ -18,7 +18,7 @@ var UserInterface = function(stage, assetManager, maxSpeed) {
     // -------------------------------------------------- get / set methods
     this.setBugsEaten = function(value) {
         txtBugs.text = String(value);
-    }
+    };
 
     this.setSnakeSpeed = function(speed) {
         // adjust width of speedBar

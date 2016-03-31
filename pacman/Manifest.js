@@ -1,0 +1,25 @@
+var manifest = [
+    {
+        src:"lib/FrankSchmidtRockIT.json",
+        forSpritesheet:"assets"
+    },
+    {
+        src:"lib/FrankSchmidtRockIT.png",
+        id:"assets"
+    },
+    {
+        src:"lib/point.ogg",
+        id:"point",
+        data:4
+    },
+    {
+        src:"lib/drumLoop.ogg",
+        id:"drumLoop",
+        data:4
+    },
+    {
+        src:"lib/death.ogg",
+        id:"death",
+        data:4
+    }
+];

@@ -61,7 +61,7 @@ var AssetManager = function(stage) {
     preloader = new createjs.LoadQueue();
 
     // construct custom event object and initialize it
-    var eventAllAssetsLoaded  = new createjs.Event("onAllAssetsLoaded");
+    var eventAllLoaded = new createjs.Event("onAllAssetsLoaded");
 
 	// ------------------------------------------------------ event handlers
     function onLoaded(e) {
@@ -107,13 +107,14 @@ var AssetManager = function(stage) {
         // kill event listeners
         preloader.removeAllEventListeners();
         // dispatch event that all assets are loaded
-        stage.dispatchEvent(eventAllAssetsLoaded );
+        stage.dispatchEvent(eventAllLoaded);
     }
 
 	// ------------------------------------------------------ public methods
     this.getSprite = function(spriteSheetID) {
         // construct sprite object to animate the frames (I call this a clip)
         var sprite = new createjs.Sprite(spriteSheets[spriteSheetID]);
+        sprite.name = spriteSheetID;
         sprite.x = 0;
         sprite.y = 0;
         sprite.currentFrame = 0;
