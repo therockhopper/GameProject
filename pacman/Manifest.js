@@ -21,5 +21,10 @@ var manifest = [
         src:"lib/death.ogg",
         id:"death",
         data:4
+    },
+    {
+        src:"lib/newAuto.ogg",
+        id:"newAuto",
+        data:4
     }
 ];

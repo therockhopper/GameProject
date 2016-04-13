@@ -7,6 +7,8 @@ var Slash = function (stage, assetManger) {
 
     // get animation for snake
     var sprite = assetManger.getSprite("assets");
+    sprite.regX= 30;
+    sprite.regY= 30;
     var spriteMover = new Mover(sprite,stage);
     // add slash to the stage
     stage.addChild(sprite);

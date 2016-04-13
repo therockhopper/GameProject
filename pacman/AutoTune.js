@@ -7,7 +7,7 @@ var AutoTune = function(stage, assetManager, slash) {
     // construct sprite for this object and add to stage
     var sprite = assetManager.getSprite("assets");
     sprite.gotoAndPlay("MTV");
-    var spriteMover = new MoverDiagonal(sprite,stage);
+    var follow = new Follow(sprite,slashSprite,stage);
 
     // =================== PRIVATE METHODS =======================
     function randomMe(low, high) {
@@ -19,7 +19,7 @@ var AutoTune = function(stage, assetManager, slash) {
     this.setupMe = function() {
 
         // random selection of speed of auto tune
-        spriteMover.setSpeed(randomMe(2,6));
+        follow.setSpeed(randomMe(2,6));
 
         // get bounds of sprite so we can determine width / height
         var dimensions = sprite.getBounds();
@@ -30,12 +30,10 @@ var AutoTune = function(stage, assetManager, slash) {
             sprite.x = -dimensions.width;
             // randomly select starting y location of mower
             sprite.y = randomMe(50, stage.canvas.height - 50);
-            sprite.rotation = randomMe(45, -45);
         } else {
             // move left
             sprite.x = stage.canvas.width;
             sprite.y = randomMe(50, stage.canvas.height - 50);
-            sprite.rotation = randomMe(135, 225);
         }
 
         // listen for when the auto tune goes off screen
@@ -45,7 +43,7 @@ var AutoTune = function(stage, assetManager, slash) {
     this.releaseMe = function() {
         // release the bug onto the canvas and make it start moving
         sprite.gotoAndPlay("MTV");
-        spriteMover.startMe();
+        follow.startMe();
 
         console.log("releasing new Auto tune");
         // add the auto tune to the stage below SLASH
@@ -53,20 +51,22 @@ var AutoTune = function(stage, assetManager, slash) {
     };
 
     // ---------------------------- check if slash has collied with the auto tune
-    this.updateMe = function() {
+    this.updateMe = function(speed) {
 
         // if bug not moving then nothing to update!
-        if ((!spriteMover.getMoving()) || (slash.getKilled())) return;
+        if ((!follow.getMoving()) || (slash.getKilled())) return;
 
         // update sprite
-        spriteMover.update();
+        follow.update(speed);
 
+        var intersection = ndgmr.checkRectCollision(slashSprite,sprite);
 
-         var point = slashSprite.globalToLocal(sprite.x, sprite.y);
-         if (slashSprite.hitTest(point.x, point.y)) {
-         // kill slash and end game
-         slash.killMe();
-         }
+        if (intersection != null) {
+            // collision detection with snake
+            console.log("Slash collision!");
+            // kill slash and end game
+            slash.killMe();
+        }
 
     };
 
@@ -74,7 +74,7 @@ var AutoTune = function(stage, assetManager, slash) {
     // ---------------------- Play dead animation
     function onKillMe(e) {
         sprite.dispatchEvent(eventAutoTuneDead);
-        spriteMover.stopMe();
+        follow.stopMe();
         sprite.gotoAndPlay("MTVDead");
         sprite.addEventListener("animationend", onKilled);
 

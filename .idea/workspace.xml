@@ -2,29 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a5883cd1-e851-4c9c-9ee9-e9b913d46245" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pacman/AutoTune.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pacman/Game.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pacman/Manifest.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pacman/Mover.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pacman/MoverDiagonal.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pacman/UserInterface.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pacman/WhammyBar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pacman/slash.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RockIT/Game.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RockIT/Manifest.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RockIT/lib/FrankSchmidtRockIT.fla" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RockIT/lib/FrankSchmidtRockIT.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RockIT/lib/FrankSchmidtRockIT.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RockIT/lib/FrankSchmidtRockIT.swf" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/RockIT/AssetManager.js" afterPath="$PROJECT_DIR$/pacman/AssetManager.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/RockIT/game.htm" afterPath="$PROJECT_DIR$/pacman/game.htm" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/RockIT/styles.css" afterPath="$PROJECT_DIR$/pacman/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/GameProject.iml" afterPath="$PROJECT_DIR$/.idea/GameProject.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pacman/UserInterface.js" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pacman/MoverDiagonal.js" afterPath="$PROJECT_DIR$/pacman/Follow.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pacman/lib/BackUp/FrankSchmidtRockIT.fla" afterPath="$PROJECT_DIR$/pacman/lib/BackUp/FrankSchmidtRockIT.fla" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pacman/lib/BackUp/FrankSchmidtRockIT.png" afterPath="$PROJECT_DIR$/pacman/lib/BackUp/FrankSchmidtRockIT.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pacman/lib/BackUp/FrankSchmidtRockIT.swf" afterPath="$PROJECT_DIR$/pacman/lib/BackUp/FrankSchmidtRockIT.swf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pacman/lib/FrankSchmidtRockIT.fla" afterPath="$PROJECT_DIR$/pacman/lib/FrankSchmidtRockIT.fla" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pacman/lib/FrankSchmidtRockIT.png" afterPath="$PROJECT_DIR$/pacman/lib/FrankSchmidtRockIT.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pacman/lib/FrankSchmidtRockIT.swf" afterPath="$PROJECT_DIR$/pacman/lib/FrankSchmidtRockIT.swf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Lessons/chapter4/breakout.js" afterPath="$PROJECT_DIR$/Lessons/chapter4/breakout.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SeansTemplates/munch/UserInterface.js" afterPath="$PROJECT_DIR$/SeansTemplates/munch/UserInterface.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SeansTemplates/munch/game.htm" afterPath="$PROJECT_DIR$/SeansTemplates/munch/game.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pacman/AutoTune.js" afterPath="$PROJECT_DIR$/pacman/AutoTune.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pacman/Game.js" afterPath="$PROJECT_DIR$/pacman/Game.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pacman/Manifest.js" afterPath="$PROJECT_DIR$/pacman/Manifest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pacman/WhammyBar.js" afterPath="$PROJECT_DIR$/pacman/WhammyBar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pacman/game.htm" afterPath="$PROJECT_DIR$/pacman/game.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pacman/lib/BackUp/FrankSchmidtRockIT.json" afterPath="$PROJECT_DIR$/pacman/lib/BackUp/FrankSchmidtRockIT.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pacman/lib/FrankSchmidtRockIT.json" afterPath="$PROJECT_DIR$/pacman/lib/FrankSchmidtRockIT.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pacman/slash.js" afterPath="$PROJECT_DIR$/pacman/slash.js" />
     </list>
     <ignored path="GameProject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,21 +39,91 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MoverDiagonal.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pacman/MoverDiagonal.js">
+      <file leaf-file-name="Follow.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pacman/Follow.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+              <caret line="52" column="43" selection-start-line="52" selection-start-column="43" selection-end-line="52" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Slash.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pacman/Slash.js">
+      <file leaf-file-name="slash.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pacman/slash.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4233871">
-              <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AutoTune.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pacman/AutoTune.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WhammyBar.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pacman/WhammyBar.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Game.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pacman/Game.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.3109756">
+              <caret line="198" column="27" selection-start-line="198" selection-start-column="27" selection-end-line="198" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Manifest.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pacman/Manifest.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserInterface.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SeansTemplates/munch/UserInterface.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="19" column="37" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Mover.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pacman/Mover.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="67" column="45" selection-start-line="67" selection-start-column="45" selection-end-line="67" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="game.htm" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pacman/game.htm">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.625">
+              <caret line="17" column="70" selection-start-line="17" selection-start-column="70" selection-end-line="17" selection-end-column="70" />
               <folding />
             </state>
           </provider>
@@ -102,20 +166,21 @@
         <option value="$PROJECT_DIR$/RockIT/game.htm" />
         <option value="$PROJECT_DIR$/SeansTemplates/HTML5GameTemplate/Game.js" />
         <option value="$PROJECT_DIR$/pacman-master/index.html" />
-        <option value="$PROJECT_DIR$/pacman/slash.js" />
         <option value="$PROJECT_DIR$/SeansTemplates/munch/game.htm" />
         <option value="$PROJECT_DIR$/pacman/Enemy.js" />
-        <option value="$PROJECT_DIR$/pacman/Manifest.js" />
         <option value="$PROJECT_DIR$/pacman/Coin.js" />
-        <option value="$PROJECT_DIR$/pacman/game.htm" />
         <option value="$PROJECT_DIR$/pacman/Slash.js" />
-        <option value="$PROJECT_DIR$/pacman/WhammyBar.js" />
         <option value="$PROJECT_DIR$/SeansTemplates/munch/UserInterface.js" />
         <option value="$PROJECT_DIR$/pacman/UserInterface.js" />
-        <option value="$PROJECT_DIR$/pacman/AutoTune.js" />
-        <option value="$PROJECT_DIR$/pacman/Game.js" />
         <option value="$PROJECT_DIR$/pacman/Mover.js" />
         <option value="$PROJECT_DIR$/pacman/MoverDiagonal.js" />
+        <option value="$PROJECT_DIR$/pacman/slash.js" />
+        <option value="$PROJECT_DIR$/pacman/game.htm" />
+        <option value="$PROJECT_DIR$/pacman/WhammyBar.js" />
+        <option value="$PROJECT_DIR$/pacman/AutoTune.js" />
+        <option value="$PROJECT_DIR$/pacman/Follow.js" />
+        <option value="$PROJECT_DIR$/pacman/Manifest.js" />
+        <option value="$PROJECT_DIR$/pacman/Game.js" />
       </list>
     </option>
   </component>
@@ -125,8 +190,9 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1344" />
-    <option name="height" value="840" />
+    <option name="x" value="1440" />
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -153,6 +219,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -182,67 +249,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SeansTemplates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="munch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GameProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GameProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SeansTemplates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="munch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GameProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GameProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SeansTemplates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GameProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GameProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="pacman" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -362,12 +374,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1344" height="840" extended-state="0" />
+    <frame x="1440" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14134543" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.109004736" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901555" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -380,7 +393,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -429,6 +441,62 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/pacman/game.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="68" selection-start-line="10" selection-start-column="68" selection-end-line="10" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pacman/Follow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pacman/slash.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pacman/Game.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pacman/game.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="68" selection-start-line="10" selection-start-column="68" selection-end-line="10" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pacman/Follow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pacman/slash.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Lessons/WordGame/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.08064516">
@@ -643,15 +711,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7944079">
           <caret line="102" column="29" selection-start-line="102" selection-start-column="8" selection-end-line="102" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pacman/game.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.25">
-          <caret line="10" column="68" selection-start-line="10" selection-start-column="68" selection-end-line="10" selection-end-column="68" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -659,31 +718,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.49835527">
           <caret line="186" column="46" selection-start-line="186" selection-start-column="46" selection-end-line="186" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pacman/WhammyBar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SeansTemplates/munch/UserInterface.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="48" selection-start-line="0" selection-start-column="36" selection-end-line="0" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pacman/UserInterface.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.065789476">
-          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -691,54 +725,77 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.032894738">
           <caret line="56" column="26" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pacman/Game.js">
+    <entry file="file://$PROJECT_DIR$/SeansTemplates/munch/UserInterface.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8519737">
-          <caret line="214" column="31" selection-start-line="214" selection-start-column="31" selection-end-line="214" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pacman/AutoTune.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6332237">
-          <caret line="77" column="38" selection-start-line="77" selection-start-column="38" selection-end-line="77" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pacman/Manifest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13980263">
-          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="37" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pacman/Mover.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7319079">
-          <caret line="89" column="45" selection-start-line="89" selection-start-column="45" selection-end-line="89" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="67" column="45" selection-start-line="67" selection-start-column="45" selection-end-line="67" selection-end-column="45" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pacman/MoverDiagonal.js">
+    <entry file="file://$PROJECT_DIR$/pacman/game.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.625">
+          <caret line="17" column="70" selection-start-line="17" selection-start-column="70" selection-end-line="17" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pacman/WhammyBar.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pacman/Slash.js">
+    <entry file="file://$PROJECT_DIR$/pacman/Follow.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4233871">
-          <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="52" column="43" selection-start-line="52" selection-start-column="43" selection-end-line="52" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pacman/slash.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pacman/AutoTune.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pacman/Manifest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pacman/Game.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.3109756">
+          <caret line="198" column="27" selection-start-line="198" selection-start-column="27" selection-end-line="198" selection-end-column="27" />
           <folding />
         </state>
       </provider>

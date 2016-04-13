@@ -1,9 +1,6 @@
-// Munch implemented in HTML5
-// Sean Morrow
-// May 12, 2014
-
-"use strict";
 (function() {
+
+    "use strict";
 
     window.addEventListener("load", onInit);
 
@@ -21,18 +18,28 @@
     var framerate = 26;
 
     // # of whammy bars eaten
-    var whammyBarEaten;
+    var whammyBarEaten = 0;
 
     // game objects
     var assetManager;
     var introCaption;
     var scoreboard;
     var background;
-    var userInterface;
+    var txtWhammyBar;
     var gameOverCaption;
+    var gameWinCaption;
     var slash;
     var whammyBar;
     var autoTune;
+    var autoTune2;
+    var autoTune3;
+
+    // music
+    var backgroundMusic;
+
+    // flags
+    var autoTune2Released = false;
+    var autoTune3Released = false;
 
     // =============================== EVENT HANDLERS ============================
     function onInit() {
@@ -64,22 +71,16 @@
         background.gotoAndStop("background");
         stage.addChild(background);
 
-        // contruct the intro caption
-        introCaption = assetManager.getSprite("assets");
-        introCaption.gotoAndStop("introCaption");
-        introCaption.x = 50;
-        introCaption.y = 50;
-        stage.addChild(introCaption);
+        // create music objects
+        backgroundMusic = createjs.Sound.play("drumLoop", {loop:-1});
 
         // construct the game over Caption
         gameOverCaption = assetManager.getSprite("assets");
         gameOverCaption.gotoAndStop("gameOver");
-        gameOverCaption.x = 50;
-        gameOverCaption.y = 50;
 
-        // construct the userInterface that handles the score board
-        userInterface = new UserInterface(stage,assetManager);
-        userInterface.setupMe();
+        // construct the game over Caption
+        gameWinCaption = assetManager.getSprite("assets");
+        gameWinCaption.gotoAndStop("gameWin");
 
         // construct the main charchter SLASH
         slash = new Slash(stage,assetManager);
@@ -93,6 +94,24 @@
         autoTune = new AutoTune(stage,assetManager,slash);
         autoTune.setupMe();
 
+        autoTune2 = new AutoTune(stage,assetManager,slash);
+        autoTune2.setupMe();
+
+        autoTune3 = new AutoTune(stage,assetManager,slash);
+        autoTune3.setupMe();
+
+        // create user interface
+        /*txtWhammyBar = new createjs.Text("Whammy Bars Eaten: " + whammyBarEaten, "bold 15px Arial", "#ff7700");
+        txtWhammyBar.x = 173;
+        txtWhammyBar.y = 7;
+        stage.addChild(txtWhammyBar); */
+
+        scoreboard = assetManager.getSprite("assets");
+        scoreboard.gotoAndStop("scoreboard1");
+        scoreboard.x = 20;
+        scoreboard.y = 1;
+        stage.addChild(scoreboard);
+
         // setup event listen to start game
         background.addEventListener("click", onStartGame);
         // listen for when the whammyBar are eaten
@@ -102,18 +121,22 @@
         // listen for when slash is killed
         stage.addEventListener("onAutoTuneDead", onAutoTuneDead, true);
 
+        // contruct the intro caption
+        introCaption = assetManager.getSprite("assets");
+        introCaption.gotoAndStop("introCaption");
+
+        stage.addChild(introCaption);
+
         //start ticker
         createjs.Ticker.setFPS(framerate);
         createjs.Ticker.addEventListener("tick", onTick);
-
-        //start background music and loop forever
-        createjs.Sound.play("drumLoop", {loop:-1});
 
     }
 
     function onStartGame(e) {
         console.log("start Game");
         stage.removeChild(introCaption);
+        stage.removeChild(gameOverCaption);
         // remove click event on background
         background.removeEventListener("click", onStartGame);
 
@@ -142,19 +165,93 @@
 
     function onGameOver(e) {
         // gameOver
+        // stop the ticker
+        createjs.Ticker.removeEventListener("tick", onTick);
         stage.addChild(gameOverCaption);
 
         // add listener to reset game when click background
-        background.addEventListener("click", onResetGame);
+        background.addEventListener("click", resetGame);
 
         // remove all listeners
         document.removeEventListener("keydown", onKeyDown);
         document.removeEventListener("keyup", onKeyUp);
+        slash.stopMe();
     }
 
-    function onResetGame(e) {
-        // when the game needs to be reset simple recall setup....its really greasy but it works .... ill fix this later
+    function onGameWin() {
+        // stop the ticker
+        createjs.Ticker.removeEventListener("tick", onTick);
+        // User has won
+        stage.addChild(gameWinCaption);
+
+        // add listener to reset game when click background
+        background.addEventListener("click", resetGame);
+
+        // remove all listeners
+        document.removeEventListener("keydown", onKeyDown);
+        document.removeEventListener("keyup", onKeyUp);
+        slash.stopMe();
+    }
+
+    function checkForWin() {
+        // if ther user has over 10 points end the game
+        if (whammyBarEaten > 10) {
+            // user has won
+            onGameWin();
+        } else if (whammyBarEaten === 5 && autoTune2Released === false) {
+            // if score is 5
+            createjs.Sound.play("newAuto");
+            autoTune2.releaseMe();
+            autoTune2Released = true
+        }else if (whammyBarEaten === 8 && autoTune3Released === false) {
+            // if score is 5
+            createjs.Sound.play("newAuto");
+            autoTune3.releaseMe();
+            autoTune3Released = true
+
+        }
+    }
+
+    function resetGame(e) {
+        console.log("resetting Game");
+        createjs.Sound.stop(backgroundMusic);
+        // remove reset listener
+        background.removeEventListener("click", resetGame);
+        autoTune2Released = false;
+        autoTune3Released = false;
+        //reset amount of whammy bars eaten
+        backgroundMusic = null;
+        whammyBarEaten = 0;
+        updateInterface();
         onSetup();
+    }
+
+    function updateInterface() {
+        // create user interface
+        //txtWhammyBar.text = String("Whammy Bars Eaten: " + whammyBarEaten);
+        if (whammyBarEaten === 1){
+            scoreboard.gotoAndPlay("scoreboard1");
+        }else if (whammyBarEaten === 2){
+            scoreboard.gotoAndPlay("scoreboard2");
+        }else if (whammyBarEaten === 3){
+            scoreboard.gotoAndPlay("scoreboard3");
+        }else if (whammyBarEaten === 4){
+            scoreboard.gotoAndPlay("scoreboard4");
+        }else if (whammyBarEaten === 5){
+            scoreboard.gotoAndPlay("scoreboard5");
+        }else if (whammyBarEaten === 6){
+            scoreboard.gotoAndPlay("scoreboard6");
+        }else if (whammyBarEaten === 7){
+            scoreboard.gotoAndPlay("scoreboard7");
+        }else if (whammyBarEaten === 8){
+            scoreboard.gotoAndPlay("scoreboard8");
+        }else if (whammyBarEaten === 9){
+            scoreboard.gotoAndPlay("scoreboard9");
+        }else if (whammyBarEaten === 10){
+            scoreboard.gotoAndPlay("scoreboard10");
+        }
+        // update the stge with the correct scoreboard
+        console.log("updating scoreboard");
     }
 
     function AddWhammyBar() {
@@ -175,10 +272,7 @@
         whammyBarEaten++;
         console.log("Current amount of whammy eaten: " + whammyBarEaten);
         // update the whammy bar counter on the interface
-        userInterface.setWhammyBarsEaten(whammyBarEaten);
-        // update scoreboard
-        userInterface.upScoreboard(whammyBarEaten);
-
+        updateInterface();
         // add another one
         AddWhammyBar();
     }
@@ -213,12 +307,16 @@
         }
 
         // update the auto tune
-        autoTune.updateMe();
+        autoTune.updateMe(1);
+        autoTune2.updateMe(2);
+        autoTune3.updateMe(3);
         // check for collison
         whammyBar.updateMe();
         // update the snake
         slash.updateMe();
 
+        // check for win
+        checkForWin();
         // update the stage
         stage.update();
 

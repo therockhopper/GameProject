@@ -43,25 +43,21 @@ var WhammyBar = function(stage, assetManager, slash) {
     // ---------------------------- check if slash has collied with the Coin
     this.updateMe = function() {
 
+        var intersection = ndgmr.checkRectCollision(slashSprite,sprite);
 
-         // collision detection
-         // HITTEST APPROACH
-         // have to convert position of one sprite (bug) to be relative to the snakeSprite for it to work
-         var point = slashSprite.globalToLocal(sprite.x, sprite.y);
-         if (slashSprite.hitTest(point.x, point.y)) {
-             // collision detection with snake
-             console.log("Whammy bar collision!");
-             sprite.dispatchEvent(eventWhammyBarEaten);
-             onKillMe();
-         }
+        if (intersection != null){
+            // collision detection with slash
+            sprite.dispatchEvent(eventWhammyBarEaten);
+            onKillMe();
+        }
 
     };
 
     // ======================== EVENT HANDLERS ==========================
     // ---------------------- Play dead animation
     function onKillMe(e) {
-        createjs.Sound.play("point", {volume:.2});
-        sprite.gotoAndPlay("WhammyBar");
+        createjs.Sound.play("point", {volume:.8});
+        sprite.gotoAndPlay("WhammyBarDead");
         sprite.addEventListener("animationend", onKilled);
     }
 
@@ -70,8 +66,6 @@ var WhammyBar = function(stage, assetManager, slash) {
         e.remove();
         sprite.removeAllEventListeners();
         stage.removeChild(sprite);
-        console.log("WhammyBar Killed");
-
         active = false;
     }
 
