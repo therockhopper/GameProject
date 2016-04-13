@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a5883cd1-e851-4c9c-9ee9-e9b913d46245" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pacman/AutoTune.js" afterPath="$PROJECT_DIR$/pacman/AutoTune.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pacman/Game.js" afterPath="$PROJECT_DIR$/pacman/Game.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pacman/Mover.js" afterPath="$PROJECT_DIR$/pacman/Mover.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pacman/WhammyBar.js" afterPath="$PROJECT_DIR$/pacman/WhammyBar.js" />
-    </list>
+    <list default="true" id="a5883cd1-e851-4c9c-9ee9-e9b913d46245" name="Default" comment="" />
     <ignored path="GameProject.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -70,8 +64,8 @@
       <file leaf-file-name="WhammyBar.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pacman/WhammyBar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6097561">
-              <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.30487806">
+              <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -558,8 +552,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pacman/WhammyBar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6097561">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.30487806">
+          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
           <folding />
         </state>
       </provider>
