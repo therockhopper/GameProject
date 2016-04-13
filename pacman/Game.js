@@ -25,7 +25,6 @@
     var introCaption;
     var scoreboard;
     var background;
-    var txtWhammyBar;
     var gameOverCaption;
     var gameWinCaption;
     var slash;
@@ -44,8 +43,7 @@
     // =============================== EVENT HANDLERS ============================
     function onInit() {
         console.log(">> INIT");
-
-        // get cnavas
+        // get canvas
         canvas = document.getElementById("stage");
         // set canvas to as wide/hieth as browser window
         canvas.width = 600;
@@ -99,12 +97,6 @@
 
         autoTune3 = new AutoTune(stage,assetManager,slash);
         autoTune3.setupMe();
-
-        // create user interface
-        /*txtWhammyBar = new createjs.Text("Whammy Bars Eaten: " + whammyBarEaten, "bold 15px Arial", "#ff7700");
-        txtWhammyBar.x = 173;
-        txtWhammyBar.y = 7;
-        stage.addChild(txtWhammyBar); */
 
         scoreboard = assetManager.getSprite("assets");
         scoreboard.gotoAndStop("scoreboard1");
@@ -306,7 +298,7 @@
             else slash.stopMe();
         }
 
-        // update the auto tune
+        // update the auto tunes
         autoTune.updateMe(1);
         autoTune2.updateMe(2);
         autoTune3.updateMe(3);
@@ -319,7 +311,6 @@
         checkForWin();
         // update the stage
         stage.update();
-
     }
 
 })(); 

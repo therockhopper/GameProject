@@ -53,12 +53,10 @@ var AutoTune = function(stage, assetManager, slash) {
     // ---------------------------- check if slash has collied with the auto tune
     this.updateMe = function(speed) {
 
-        // if bug not moving then nothing to update!
-        if ((!follow.getMoving()) || (slash.getKilled())) return;
-
         // update sprite
         follow.update(speed);
 
+        // check for colission
         var intersection = ndgmr.checkRectCollision(slashSprite,sprite);
 
         if (intersection != null) {

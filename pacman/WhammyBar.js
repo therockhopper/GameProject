@@ -11,6 +11,10 @@ var WhammyBar = function(stage, assetManager, slash) {
     var sprite = assetManager.getSprite("assets");
     sprite.gotoAndPlay("WhammyBar");
 
+    Number.prototype.between = function (min, max) {
+        return this > min && this < max;
+    };
+
     // =================== PRIVATE METHODS =======================
     function randomMe() {
         return Math.floor(Math.random() * (450) + 1);
@@ -30,9 +34,21 @@ var WhammyBar = function(stage, assetManager, slash) {
     this.setupMe = function() {
 
         // get bounds of sprite so we can determine width / height
-        var dimensions = sprite.getBounds();
+        //var dimensions = sprite.getBounds();
 
-        // randomly slect where Coin shouyld be on stage
+        /*var tempX = randomMe();
+        var tempY = randomMe();
+
+        // if whammy postion is to close to slash do it again
+        if ((tempX.between(slashSprite.x - 100))&&(tempY.between(slashSprite.y - 100))) {
+            console.log("Not good!!!!!!!!!");
+            this.setupMe();
+        } else {
+            sprite.x = tempX;
+            sprite.y = tempY;
+        }*/
+
+        // randomly slect where whammy bar shouyld be on stage
         sprite.x = randomMe();
         sprite.y = randomMe();
 
@@ -43,6 +59,7 @@ var WhammyBar = function(stage, assetManager, slash) {
     // ---------------------------- check if slash has collied with the Coin
     this.updateMe = function() {
 
+        // check for collison
         var intersection = ndgmr.checkRectCollision(slashSprite,sprite);
 
         if (intersection != null){
@@ -50,7 +67,6 @@ var WhammyBar = function(stage, assetManager, slash) {
             sprite.dispatchEvent(eventWhammyBarEaten);
             onKillMe();
         }
-
     };
 
     // ======================== EVENT HANDLERS ==========================

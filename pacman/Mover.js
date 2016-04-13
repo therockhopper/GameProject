@@ -32,7 +32,7 @@ var Mover = function(sprite, stage) {
 
     // --------------------------------------------------- public methods
     this.startMe = function() {
-        // tell prite to move
+        // tell sprite to move
         sprite.play();
         moving = true;
     };
@@ -97,7 +97,6 @@ var Mover = function(sprite, stage) {
     };
 }
 
-// static constant hacking by adding them on as properties of a generic object
 var MoverDirection = {
     "LEFT":1,
     "RIGHT":2,
